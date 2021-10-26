@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <h2>Signup Form</h2>
+    {{#if alert}}
+    <p class="alert alert-success alert-dismissible fade show" role="alert">
+        {{alert}}
+        <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </p>
+    {{/if}}
+
+    <form action="/sign" method="POST" class="row container g-3 needs-validation" novalidate>
+    <div class="col-8 form-floating mb-3">
+        <input type="text" class="form-control" id="uname" placeholder="Name" name="uname">
+        <label for="uname">Name</label>
+    </div>
+    <div class="col-8 form-floating mb-3">
+        <input type="text" class="form-control" id="dob" placeholder="DOB" name="dob">
+        <label for="dob">DOB  (format : DD/MM/YYYY)</label>
+    </div>
+    <div class="col-8 form-floating mb-3">
+        <input type="text" class="form-control" id="mobile" placeholder="Mobile" name="mobile">
+        <label for="mobile">Mobile</label>
+    </div>
+    <div class="col-8 form-floating mb-3">
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+        <label for="password">Password</label>
+    </div>
+    <div class="col-6 d-gird">
+        <button type="submit" class="btn btn-success btn-small">Submit</button>
+    </div>
+    <div class="col-2 d-gird">
+        <a href="/" type="button" class="btn btn-primary btn-small" style="width: 90px;margin-left: 75px;">Login</a></li>
+    </div>
+    </form>
+
+</body>
+</html>

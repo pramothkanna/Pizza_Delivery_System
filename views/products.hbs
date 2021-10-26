@@ -1,0 +1,15 @@
+<head>
+   <link rel="stylesheet" href="css/products.css">
+</head>
+<body style="background: url(/images/brick.jpg);">
+            
+            {{#each rows}}
+            <div class="row container g-3" style="margin-top: 50px;background-color: olive;margin-left: 56px;">
+                <div class="col-8 mb-3"><img src="{{this.image}}" alt="" style="margin-left: -16px;"></div>
+                <div class="col-4 mb-3" style="margin-left: -40px;margin-top: -30px;"><p style="margin-top: 130px;color: whitesmoke;font-size: 31px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Name          : {{this.prod_name}}</p>
+                 <p style="font-size: 22px;color: cornsilk;font-family: cursive;">Price         : Rs.{{this.price}}</p> 
+                 <p style="font-size: 22px;color: cornsilk;font-family: cursive;s">Size Avilable : {{this.size}}</p><br>
+                 <a href="/order/{{this.prod_id}}" type="button" class="btn btn-danger" style="font-size: 18px;height: 45px;">Add to Cart </a></div>
+            </div>
+            {{/each}}
+</body>

@@ -1,0 +1,42 @@
+<head>
+    <link rel="stylesheet" href="/css/order.css">
+</head>
+<body>    
+    <div class="title-box">
+    <div class="row container g-3 ">
+    <h3 style="padding-left: 701px;color: white;font-size: 31px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Pizza Deliver To : {{username}}</h3>
+    {{#each rows}}
+        <div class="col-8 mb-3" style="margin-top: -25px;"><img src="{{this.image}}" alt=""></div>
+        <div class="col-4 mb-3" style="margin-left: -46px;">
+            <p  style="color: whitesmoke;font-size: 31px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Pizza : {{this.prod_name}}</p>
+             <p style="font-size: 22px;color: cornsilk;font-family: cursive;">Price : {{this.price}}</p>
+            <form action="/order/{{this.price}}" method="POST" class="needs-validation" novalidate>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="mobile" placeholder="Mobile" name="mobile">
+                <label for="mobile">Mobile</label>
+            </div>
+            <div class="form-floating mb-3">
+                
+                <select class="form-control" id="quantity" name="quantity" placeholder="Quantity">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>     
+                </select>
+                <label for="quantity">Quantity</label>
+            </div>
+    
+            <div class="form-floating mb-3">
+                <textarea class="form-control" id="address" name="address" placeholder="Address"></textarea>
+                <label for="address">Address</label>
+            </div>
+            <div class="d-gird">
+                <button type="submit" class="btn btn-danger btn-small" style="margin-top: 10px;height: 40px;font-size: 18px;">Confirm </button>
+            </div>
+            </form>
+        </div>
+    </div>
+    {{/each}}
+
+</body>

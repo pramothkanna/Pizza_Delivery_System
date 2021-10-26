@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/loginadmin.css">
+</head>
+<body>
+    
+    
+    <form action="/adminpage" method="POST" class="row container g-3 needs-validation" novalidate>
+    <h3 class="col-6 d-grid">Login Form</h3>
+    {{#if alert}}
+    <p class="alert alert-success alert-dismissible fade show col-6 d-grid" role="alert" style="margin-right: 6px;">
+    {{alert}}
+    <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </p>
+    {{/if}}
+    <div class="col-6 form-floating d-grid">
+        <input type="text" class="form-control" id="uname" placeholder="Mob No" name="uname">
+        <label for="uname">Admin Name</label>
+    </div>
+    <div class="col-6 form-floating d-grid">
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+        <label for="password">Password</label>
+    </div>
+    <div class="col-2 b-gird">
+        <button type="submit" class="btn btn-success btn-small" style="width: 100px;height: 40px;margin-left: 230px;margin-top: 30px;">Submit</button>
+    </div>
+    </form>
+</body>
+</html>

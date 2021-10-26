@@ -1,0 +1,18 @@
+<head>
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body style="background: url(/images/whitebrick.jpg);">
+    {{#each rows}}
+            <div class="row container g-3" style="margin-top: 25px;margin-bottom: 25px;margin-left: 65px;background-color: rgb(1, 99, 99);">
+                <div class="col-8 mb-3"><img src="{{this.image}}" alt="" style="margin-left: -6px;"></div>
+                <div class="col-4 mb-3" style="margin-left: -50px;margin-top: -30px;">
+                 <p style="margin-top: 75px;color: whitesmoke;font-size: 31px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Name         : {{this.name}}</p>
+                 <p style="color: whitesmoke;font-size: 31px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Pizza          : {{this.prod_name}}</p>
+                 <p style="font-size: 22px;color: cornsilk;font-family: cursive;">Price         : Rs.{{this.price}}</p> 
+                 <p style="font-size: 22px;color: cornsilk;font-family: cursive;">Quantity : {{this.quantity}}</p>
+                 <p style="font-size: 22px;color: cornsilk;font-family: cursive;">Total Price : Rs.{{this.total_price}}</p>
+                 <p style="font-size: 22px;color: cornsilk;font-family: cursive;s">Address : {{this.address}}</p>
+                </div>
+            </div>
+    {{/each}}
+</body>
