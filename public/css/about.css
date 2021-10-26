@@ -1,0 +1,22 @@
+img{
+    margin-left: 540px;
+    margin-top: 25px;
+}
+h1{
+    text-align: center;
+    font-size: 33px;
+}
+h3{
+    text-align: center;
+    font-size: 23px;
+}
+p{
+    text-align: center;
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 19px;
+    font-family: monospace;
+}
+body{
+    background: url("/images/whitewall.jpg");
+}

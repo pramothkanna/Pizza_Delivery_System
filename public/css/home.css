@@ -1,0 +1,19 @@
+.nav-link{
+    height: 75px;
+    padding-top: 20px;
+    width: 140px;
+    text-align: center;
+    color: white;
+}
+.nav{
+    background-color:black;
+}
+.nav-link:hover{
+    background-color:navy;
+    color: white;
+}
+
+#cartli:hover{
+    background-color: rgb(175, 5, 5);
+    color: white;
+}
